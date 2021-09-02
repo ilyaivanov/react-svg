@@ -3,6 +3,11 @@ type Action<TIn> = (arg: TIn) => void;
 type Func0<TOut> = () => TOut;
 type Func1<TIn, TOut> = (arg: TIn) => TOut;
 
+type Vector = {
+  x: number;
+  y: number;
+};
+
 declare function haveBeenCalledWith<T extends (...args: any) => any>(
   fn: T,
   ...args: Parameters<T>
